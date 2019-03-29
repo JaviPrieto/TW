@@ -1,0 +1,117 @@
+/*******************************************/
+/*Quitarle los margenes a los encabezados*/
+
+h1{
+	padding: 20px;
+	margin: 0px;
+}
+
+h3,h4{
+	padding: 0px;
+	margin: 0px;
+}
+
+/****************************************/
+/*Header*/
+
+header{
+	background-color: rgba(139,51,247,.7);
+	text-align: center;
+}
+
+/****************************************/
+/*Menu navegacion*/
+
+nav ul {
+	background-color: rgba(254,124,109,.7);
+	list-style-type: none;
+	text-indent: 50px;
+	padding: 20px;
+	margin: 0px;
+}	
+
+nav ul li a{
+	text-decoration: none;
+	color: darkRed;
+	line-height: 30px;
+
+}
+
+/*Enlaces al pasar ratón por encima*/
+nav ul li a:hover {
+  background-color: rgba(129,214,255,.3);
+  padding: 10px;
+}
+
+
+/****************************************/
+/*Main*/   
+
+main{
+	padding: 20px;
+	margin: 0;
+	background-color: rgba(129,255,165,.6);
+}
+
+/****************************************/
+/*Para centrar todas las fotos */
+
+.foto{
+	display: block;
+	margin: auto;
+	padding-bottom: 20px;
+	margin-top: 20px;
+}
+
+/*Para centrar todos los videos */
+.video{
+	display: block;
+	margin: auto;
+}
+
+/****************************************/
+/*Para el apartado de ingredientes*/
+
+#ingredientes{
+	margin-top: 5px;
+	background-color: rgb(226,174,255);
+	font-style: italic;
+}
+
+#ingredientes h3{
+	background-color: rgba(136,87,164,.7);
+	color: white;
+	text-indent: 30px;
+	padding: 10px;
+	font-style: normal;
+}
+
+/****************************************/
+/*Para los ultimos apartados preparacion*/
+
+#prep{
+	background-color: moccasin;
+	padding: 20px;
+}
+
+#prep h3{
+	background-color: tan;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#prep .texto{
+	background-color: powderBlue;
+	padding-top: 20px;
+	padding-left: 20px;
+
+}
+
+#prep .texto p{
+	margin: 0px;
+}
+
+
+

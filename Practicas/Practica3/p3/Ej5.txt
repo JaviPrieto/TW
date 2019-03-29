@@ -1,0 +1,59 @@
+Ejercicio5
+___________
+
+A cada elemento hacer un float a la izquierda
+Si cada columna es un 30% de la pagina y le ponemos un float left ya tenemos nuestras 3 columnas.
+Contenedor de filas, con tantos bloques como elementos queramos tener.
+
+
+Elemento div,section,article (bloque) de tipo fila y dentro de ese tantos bloques como columnas tengamos.
+
+	<div class="fila">
+		<div class="columna">
+		<div class="columna">
+		<div class="columna">
+	</div>
+
+
+CSS
+*****
+
+.fila{
+	width: 90%;
+}
+
+.fila:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.col{
+	width: 30%;
+	float: left;
+}
+
+
+/*****************************************************************************************************************************************************/
+MEJOR:
+
+
+Parte común en una clase col genérica
+
+	.col{
+		float:left;
+	}
+
+	.col30{
+		width:30%;
+	}
+
+	.col25{
+		width:30%;
+	}
+
+<div class="fila">
+		<div class="col col30">						.fila > *{
+		<div class="col col30">       --> Para mejorar esto:			float: left;		Cualquier hijo directo de fila.
+		<div class="col col30">							width: 30%:
+</div>										}

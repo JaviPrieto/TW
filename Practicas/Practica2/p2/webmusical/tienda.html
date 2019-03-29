@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Natos y Waor | Tienda</title>
+	</head>
+	<body>
+		<header>
+			<img src="imagenes/imagen-header" width=400/>
+			<h1>Natos y Waor</h1>
+		</header>
+
+		<nav>
+			<ul>
+				<li>
+					<a href="https://void.ugr.es/~javiprieto11718/p2/webmusical/webmusical.html"> Inicio </a>
+				</li>
+				<li>
+					<a href="https://void.ugr.es/~javiprieto11718/p2/webmusical/biografia.html"> Biografía </a>
+				</li>
+				<li>
+					<a href="http://void.ugr.es/~javiprieto11718/p2/webmusical/discografia.html"> Discografía </a>
+				</li>
+				<li>
+					<a href="https://void.ugr.es/~javiprieto11718/p2/webmusical/tienda.html"> Tienda </a>
+				</li>
+			</ul>
+		</nav>
+
+		<main>
+			<h2> Proceso de compra</h2>
+
+			<!-- FORMULARIO -->
+			<form action="procesar.php" method="post">
+				<fieldset>
+					<legend><b>Selección de álbum</b></legend>
+					<label>Álbum que desea comprar<br>
+					<input type="checkbox" name= "album[]" value="porlajeta"/>Por la jeta<br>
+					<input type="checkbox" name= "album[]" value="catarsis"/>Catarsis<br>
+					<input type="checkbox" name= "album[]" value="hijosdelaruina"/>Hijos de la ruina<br>
+					<input type="checkbox" name= "album[]" value="cajanegra"/>Caja Negra<br>
+					<input type="checkbox" name= "album[]" value="martes13"/>Martes 13<br>
+					<input type="checkbox" name= "album[]" value="hijosdelaruina2"/>Hijos de la ruina Vol.2<br>
+					<input type="checkbox" name= "album[]" value="cicatrices"/>Cicatrices<br></label>
+				</fieldset>
+
+				<fieldset>
+					<legend><b>Datos personales del comprador</b></legend>
+					<label>Nombre:<br>
+					<input type="text" name="nombre"/><br></label>
+					<label>Apellidos:<br>
+					<input type="text" name="ape"/><br></label>
+					<label>DNI/NIF:<br>
+					<input type="text" name="dni"/><br></label>
+					<label>Edad:<br>
+					<select name="edad">
+						<option>Menor de 18 años</option>
+						<option>Entre 18 - 30 años</option>
+						<option>Entre 30 - 40 años</option>
+						<option>Mayor de 40 años</option>
+					</select><br></label>
+					<label>Teléfono:<br>
+					<input type="tel" name="telef"/><br></label>
+				</fieldset>
+
+				<fieldset>
+					<legend><b>Datos de pago</b></legend>
+					<label>Tipo de tarjeta:<br>
+					<input type="radio" name="tarjeta" value="visa" checked/>Visa<br>
+					<input type="radio" name="tarjeta" value="mastercard"/>MasterCard<br>
+					<input type="radio" name="tarjeta" value="paypal"/>Paypal<br></label>
+					<label>Número de tarjeta:<br>
+					<input type="text" name="cardnumber" placeholder="XXXX XXXX XXXX XXXX"><br></label>
+					<label>Mes y año de caducidad:<br>
+					<input type="text" name="cardmonth" placeholder="MM/YY"/><br></label>
+					<label>Código de verificación:<br>
+					<input type="text" name="cardcode" placeholder="CVC"/><br></label>
+				</fieldset>
+
+				<fieldset>
+					<legend><b>Dirección de envío</b></legend>
+					<label>Calle:<br>
+					<input type="text" name="calle"/><br></label>
+					<label>Población:<br>
+					<input type="text" name="poblacion"/><br></label>
+					<label>Provincia:<br>
+					<input type="text" name="provincia"/><br></label>
+					<label>Código postal:<br>
+					<input type="text" name="codpostal"/><br></label>
+				</fieldset>
+
+				<p>
+					<input type="submit" value="Enviar" >
+					<input type="reset" value="Limpiar campos">
+				</p>
+			</form>
+		</main>
+
+		<footer>
+			<p> <a href="https://void.ugr.es/~javiprieto11718/p2/webmusical/webmusical.html"> Inicio  </a>
+					<a href="http://www.copyright.es/"> Copyright  </a>
+			</p>
+			<small><p id="copyright"> NATOS Y WAOR &copy; 2018, REALIZADA POR Javier Prieto</p></small>
+	</footer>
+	</body>
+</html>

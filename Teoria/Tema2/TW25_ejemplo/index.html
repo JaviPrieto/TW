@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo</title>
+		<link rel="stylesheet" title="Estilo fijo con float" href="style.css" />
+		<link rel="alternate stylesheet" title="Estilo fijo con Flexbox" href="style_flex.css" />
+		<link rel="alternate stylesheet" title="Estilo fijo con Grid" href="style_grid.css" />
+		<link rel="alternate stylesheet" title="Estilo adaptable (fijo/fluido)" href="style_adaptable.css" />
+		<meta name="viewport" content="width=device-width">   <!-- Para diseño adaptable -->
+	</head>
+	<body>
+		<header>
+			<div id="h_izq">
+				<h1>Mi página</h1>
+				<h2>Pepito Pérez</h2>
+			</div>
+			<div id="h_der">
+				<img src="img/mapa.jpg"/>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li class="activo"><a href="#">Inicio</a></li>
+				<li><a href="#">Aficiones</a></li>
+				<li><a href="#">Viajes</a></li>
+				<li><a href="#">Lecturas</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+			<div id="fecha">13 de febrero de 2017</div>
+		</nav>
+		<div id="contenido">
+			<main id="c_izq">
+				<article class="post">
+					<div class="encabezado">
+						<div class="fecha">Febrero de 2017</div>
+						<h1 class="titulo">Viaje a Londres</h1>
+					</div>
+					<div class="contenido">
+						<img src="img/londres.jpg" alt="Foto de Londres" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum volutpat iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum sagittis lacus urna, nec feugiat velit placerat sed. Aliquam neque urna, placerat ac ornare et, commodo quis arcu. Nam blandit laoreet arcu nec volutpat. Integer gravida fringilla lectus porta gravida. Sed tempor tincidunt tincidunt. Maecenas eget tincidunt sapien, ut finibus nibh. In maximus justo eu leo lobortis, eget consequat lacus pellentesque. Cras id mollis lacus, ultrices porttitor leo.</p>
+						<p>Proin et metus efficitur, tincidunt tellus id, convallis mauris. Nam eget tempor nisi. Duis nisl sapien, pretium id molestie vel, euismod a ligula. Proin euismod mauris eget enim ultricies, ut ultricies risus dapibus. Sed eu finibus felis. Integer non finibus neque. Nam id pretium nibh. Nunc fermentum risus vel dui consequat, semper accumsan nisi euismod. Suspendisse suscipit sollicitudin elit luctus viverra. Sed auctor, odio ut mollis porta, lectus mauris iaculis lacus, nec venenatis metus risus eleifend velit. Suspendisse maximus eros at eros pellentesque, at consectetur odio aliquet.</p>
+					</div>
+					<div class="pie">
+						<ul>
+							<li class="imprimir"><a href="#">Imprimir</a></li>
+							<li class="comentarios"><a href="#">Comentarios</a></li>
+							<li class="leermas"><a href="#">Leer más</a></li>
+						</ul>
+					</div>
+				</article>
+				<article class="post">
+					<div class="encabezado">
+						<div class="fecha">Diciembre de 2016</div>
+						<h1 class="titulo">Viaje a París</h1>
+					</div>
+					<div class="contenido">
+						<img src="img/paris.jpg" alt="Foto de París" />
+						<p>Maecenas finibus risus at lectus placerat, eu semper eros euismod. Cras nec magna sed massa congue consequat ut quis erat. Nunc risus lacus, egestas vel risus hendrerit, mollis iaculis nibh. Aliquam sodales molestie neque, ornare porttitor ipsum finibus non. Nulla venenatis nibh eu mollis porttitor. Sed in dignissim magna. Curabitur eu ultricies turpis. Suspendisse euismod, quam eget viverra accumsan, lacus quam mollis risus, quis pulvinar urna tortor sed odio. Nunc interdum quam vel dolor commodo eleifend. Suspendisse tortor magna, gravida eu pulvinar sit amet, molestie in nisl. Duis vel purus vitae libero ultrices gravida. Maecenas fermentum lorem a ultricies facilisis. </p>
+						<p>Nam sed iaculis sem. Sed tincidunt enim non dui aliquet consectetur. Maecenas nec ipsum dignissim, fermentum erat a, hendrerit elit. Maecenas lectus lorem, ultrices id libero vitae, consequat condimentum eros. Donec tellus turpis, fringilla rhoncus viverra ac, imperdiet nec sapien. Etiam ut laoreet risus. Sed in tincidunt purus, in laoreet metus. Aliquam erat volutpat. Mauris ac massa egestas, semper libero in, commodo mi. Curabitur felis turpis, convallis a maximus convallis, fringilla ac velit. Nunc pretium lorem sed diam volutpat molestie. </p>
+					</div>
+					<div class="pie">
+						<ul>
+							<li class="imprimir"><a href="#">Imprimir</a></li>
+							<li class="comentarios"><a href="#">Comentarios</a></li>
+							<li class="leermas"><a href="#">Leer más</a></li>
+						</ul>
+					</div>
+				</article>
+				<div id="siguiente">
+					<a href="#">Ver más entradas ... >> </a>
+				</div>
+			</main>
+			<div id="c_der">
+				<section class="bloque" id="sobremi">
+					<h3 class="titulo">Sobre mi</h3>
+					<img src="img/tux.jpg" alt="Mi foto" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</section>
+				
+				<section class="bloque" id="visitados">
+					<h3 class="titulo">Lo más visitado</h3>
+					<ul class="lista">
+						<li><a href="#">Viaje a Londres</a></li>
+						<li><a href="#">Web Standards</a></li>
+						<li><a href="#">Beginning CSS3</a></li>
+						<li><a href="#">Fotos de Granada</a></li>
+						<li><a href="#">Este disco me gusta</a></li>
+						<li><a href="#">Principles of web design</a></li>
+						<li><a href="#">Viaje a Madrid</a></li>
+						<li><a href="#">Viaje a la Alcarria</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<p>&copy; Mi página. Pepito Pérez</p>
+		</footer>
+		
+	</div>
+</body>
+</html>

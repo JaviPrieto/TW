@@ -1,0 +1,11 @@
+.listado table tr:nth-child(even){
+  background-color: #B7D7E8;
+}
+.listado table tr:nth-child(odd){
+  background-color: #CFE0E8;
+}
+/* Encabezado */
+.listado table tr:nth-child(1){
+  background-color: #87BDD8;
+  border-bottom: solid 2px #667292;
+}

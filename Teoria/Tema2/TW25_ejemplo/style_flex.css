@@ -1,0 +1,303 @@
+body {
+  background: #F9F9F7 url('img/fondo.gif') repeat-y;
+  background-position: center;  /* Centrar imagen */
+  width: 696px;     /* Menor que ancho de imagen para dejar borde blanco */
+  margin: 0 auto;   /* Centrar el body */
+  font-size: 11px;
+  font-family: "trebuchet ms", helvetica, sans-serif;
+  line-height: 18px;
+}
+
+/* -------------- Estructura Flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#contenido {
+  display: flex;
+  justify-content: space-between;  
+}
+
+nav ul {
+  display: flex;
+}
+
+/* -------------- ENCABEZADO */
+header {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* Cuadro izquierdo */
+header #h_izq {
+/*  float:left;*/
+  background: url('img/fondoheader.gif') repeat-x;
+  width: 208px;
+  height: 92px;
+  color: #fff;
+  padding-left: 20px;
+}
+
+/* Cuadro derecho */
+header #h_der {
+/*  float:right;*/
+  width: 458px;
+  height: 92px;
+}
+
+/* Título 1 del cuadro izquierdo */
+header h1 {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+/* Título 2 del cuadro izquierdo */
+header h2 {
+  margin-top: 0;
+  font-size: smaller;
+}
+
+/* Cancelar efecto de float para lo que venga después */
+/*header:after {  
+  content: "";
+  clear: both;
+  display: block;
+}*/
+
+/* -------------- NAVEGACIÓN */
+nav {
+  background: #46461F url('img/fondomenu.gif') repeat-x;
+  height: 67px;  /* Alto de imagen */
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Lista del menú de navegación */
+nav ul {
+  list-style: none;
+  /*float: left;*/
+  height: 40px;
+}
+
+/* Items de la lista del menú de navegación */
+nav ul li {
+  /*float: left;*/
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 6px;
+  padding-bottom: 16px;  /* Rellena hata la línea base dle menú de nav */
+}
+
+/* Enlaces del menú de navegación */
+nav ul li a {
+  color: #fff;
+  padding: 8px 12px 20px 12px;
+  text-decoration: none;  /* Quitar subrayado */
+}
+
+/* Enlaces al pasar ratón por encima */
+nav ul li a:hover {
+  background: #fff url('img/fondoenlace.gif') repeat-x top;
+  color: #4A4A24;
+}
+
+/* Fecha del menú de navegación */
+nav #fecha {
+  /*float: right;*/
+  padding: 5px 5px 0 0;
+  color: #BDBDA2;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -1px;
+}
+
+/* Pestaña activa del menú */
+nav ul li.activo {
+  background-color: #BDBDA2;
+}
+
+/* -------------- CONTENEDOR PRINCIPAL DE CONTENIDO */
+#contenido {
+}
+
+/* Zona izquierda de contenidos (artículos) */
+#contenido #c_izq {
+  /*float:left;*/
+  width: 500px;
+}
+
+/* Zona derecha de contenidos (sobre mi, etc) */
+#contenido #c_der {
+  /*float:right;*/
+  width: 180px;
+  color: #656551;
+}
+
+/* Cancelar efecto de float para lo que venga después */
+/*#contenido:after {
+  content: "";
+  clear: both;
+  display: block;
+}*/
+
+/* -------------- ENTRADAS DEL BLOG */
+
+/* Margen izquierdo de artículos (incluye el pie) */
+#contenido #c_izq .post .contenido,
+#contenido #c_izq .post .pie {
+  margin-left: 30px;
+}
+
+/* Encabezado del artículo */
+#contenido #c_izq .post .encabezado {
+  border-bottom-style: dotted;
+  border-bottom-width: 0.5px;
+  color: #656551;
+  letter-spacing: -1px;
+}
+
+/* Título del artículo */
+#contenido #c_izq .post .encabezado h1 {
+  margin-bottom: 0px;
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 0px;
+}
+
+/* Fecha del artículo */
+#contenido #c_izq .post .encabezado .fecha {
+  float:right;
+  padding-top: 4px;
+  font-weight: bold;
+}
+
+/* Cancelar efecto de float para lo que venga después */
+/*#contenido #c_izq .post .encabezado:after { 
+  content: "";
+  display: block;
+  clear: both;
+}*/
+
+/* Imágenes del artículo */
+#contenido #c_izq .post .contenido img {
+  width: 100px;
+  box-shadow: 0px 0px 10px #888888;
+  border: solid 4px white;
+  margin: 10px;
+  float:left;
+}
+
+/* Anular float de la imagen */
+#contenido #c_izq .post .contenido:after {
+  clear: both;
+  content: "";
+  display:block;
+}
+
+/* Pie del artículo */
+#contenido #c_izq .post .pie {
+  background-color: #E9E9E7;
+  padding: 5px;
+}
+
+/* Pie del artículo: lista de enlaces */
+#contenido #c_izq .post .pie ul {
+  list-style: none;
+  text-align: right;
+  margin: 0px;
+}
+
+/* Pie del artículo: cada item de la lista */
+#contenido #c_izq .post .pie ul li {
+  display: inline;
+  padding-left: 17px;
+  margin-left: 25px;
+}
+
+/* Pie del artículo: Imagen de impresora */
+#contenido #c_izq .post .pie ul li.imprimir {
+  background-image: url('img/imprimir.gif');
+  background-repeat: no-repeat;
+}
+
+/* Pie del artículo: Imagen de comentarios */
+#contenido #c_izq .post .pie ul li.comentarios {
+  background-image: url('img/comentarios.gif');
+  background-repeat: no-repeat;
+}
+
+/* Pie del artículo: Imagen de leer más */
+#contenido #c_izq .post .pie ul li.leermas {
+  background-image: url('img/leermas.gif');
+  background-repeat: no-repeat;
+}
+
+/* Enlaces del pie del artículo */
+#contenido #c_izq .post .pie ul li a {
+  color: #FF7800;
+  text-decoration: none;  
+}
+
+/* -------------- Botón de "ver más entradas" */
+
+#contenido #c_izq #siguiente {
+  text-align: right;
+  margin: 10px 0 10px 0;
+}
+
+#contenido #c_izq #siguiente a {
+  background-color: #FF7800;
+  color: white;
+  padding: 5px;
+}
+
+/* -------------- Bloques de la derecha */
+
+/* Título del bloque */
+#contenido #c_der .bloque .titulo {
+  font-size: larger;
+  border-bottom-style: dotted;
+  border-bottom-width: 0.5px;
+}
+
+/* Imágenes del bloque */
+#contenido #c_der .bloque img {
+  max-width: 156px;
+  display: block;
+  margin: auto;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+/* Lista de items */
+#contenido #c_der .bloque .lista {
+  list-style: none;
+  padding-left: 0px;
+}
+
+/* Enlaces en el bloque */
+#contenido #c_der .bloque .lista a {
+  color: #FF7800;
+  text-decoration: none;
+}
+
+/* -------------- PIE DE PÁGINA */
+footer {
+  clear: both;
+  margin: 0;
+  background: #46461F url('img/fondomenu.gif') repeat-x;
+  height: 67px;  /* Alto de imagen */
+  color: White;
+  font-weight: bold;
+  padding: 4px 20px;
+  box-sizing: border-box;
+  text-align: right;
+}

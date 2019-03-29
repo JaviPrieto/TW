@@ -1,0 +1,147 @@
+PRACTICA 1: TW
+--------------
+
+-conectarse a la máquina del profesor
+
+	http://172.18.142.166:8080/
+
+-reiniciar apache
+	service apache2 restart
+
+-activar puertos
+
+	sudo ufw allow http
+	sudo ufw allow 443
+	sudo ufw status
+
+-para ver las peticiones a mi servidor
+
+	cd /var/log/apache2
+	tail -f access.log	
+
+-instalar php
+
+	sudo apt-get install php
+
+-instalar un modulo que apache utiliza para usar el interprete php
+
+	cd /var/www/html
+	cat > phpinfo.php
+	meter : <?php echo phpinfo(); ?>
+
+	no se ve nada -> http://172.18.142.166:8080/phpinfo.php
+
+	Luego procedemos a instalarlo:
+		sudo apt-get install libapache2-mod-php
+
+	
+	cd /etc/php/7.0/apache2
+	ls -l
+	Fichero php.ini - cambiar opciones para que salgan mensajes de error
+		(linea 462)
+		Display_errors = ON
+		Error_reporting = E_ALL
+
+
+
+-crear jerarquia de directorios
+
+	cd /var/www/html
+	Ejercicio 5 (diapositivas)
+
+
+-configurar apache para si no encuentra el index.html no encuentre el directorio de carpetas
+
+	cd /etc/apache2/conf-available
+	geany miconfiguracion.conf
+	Escribir: 
+		<Directory /var/www/html/publico/protegido>
+			Options -Indexes
+		</Directory>
+
+	service apache2 restart
+	a2enconf miconfiguracion
+
+
+-orden en que ejecuta los ficheros cuando entre en una carpeta (busque usuarios.html en vez de index.html)
+	
+	Dentro de miconfiguracion.conf
+	Escribir:
+		<Directory /var/www/html/publico>
+			DirectoryIndex usuarios.html (LUEGO) index.html
+		</Directory>
+
+
+
+	LAS DIRECTIVAS AFECTAN A UNA CARPETA Y TODAS LA QUE CUELGAN DE ELLA.
+
+
+-alias (hacer que una ruta se llame de otra manera para no tener que escribirla entera)
+
+	Dentro de miconfiguracion.conf
+	Escribir:
+		Alias pp /var/www/html/publico/protegido
+
+
+-proteger el directorio privado (impedir que se muestre el y los ficheros que contiene)
+	
+	Dentro de miconfiguracion.conf
+	Escribir:
+		<Directory /var/www/html/privado>
+			Require all denied
+		</Directory>
+
+	
+
+-crear fichero
+
+	htpasswd -c claves.txt curioso
+	Introducir contraseña
+
+	mv claves.txt .
+
+	Dentro de miconfiguracion.conf
+	Escribir:
+		<Directory /var/www/html/privado>
+			AuthType Basic
+			AuthUserFile =/var/www/claves.txt"
+			AuthName "Dime quien eres"
+			Require user curioso
+		</Directory>
+	
+
+-En /var/www/html/privado
+	
+	Quitamos lo ultimo de miconfiguracion.conf
+	Crear .htaccess y escribir:
+	
+		AuthType Basic
+		AuthUserFile =/var/www/claves.txt"
+		AuthName "Dime quien eres"
+		Require user curioso
+
+	Reiniciamos y no va
+
+	apache2.conf
+	(linea 164)
+		AllowOverride All	
+
+	Al habilitarlo ya funcionaria.
+
+
+-En /home/javiprieto11/public_html
+
+	mkdir public_html (En mi home)
+	cd /etc/apache2/mods-available	
+	geany userdif.conf
+	a2enmod userdir
+	service apache2 restart
+
+
+
+
+	
+	
+
+
+

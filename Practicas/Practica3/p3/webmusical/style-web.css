@@ -1,0 +1,180 @@
+header{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+body{
+	padding:20px;
+	font-family: sans-serif;
+}
+
+h3, h2{
+	background-color: rgba(238,238,27,.7);
+	font-size: 20px;
+}
+
+a{
+	color:darkgreen;
+}
+
+/****************************************************/
+/*Menu navegacion*/
+
+.back_nav{
+	margin:15px 0px;
+	padding:3px 0px;
+	background-color: rgb(107,107,107);
+}
+
+.back_nav nav{
+	display: block;
+	justify-content: space-between;
+	margin-right:20px;
+}
+
+.back_nav nav ul{
+	list-style-type: none;
+}
+
+.back_nav nav ul li{
+	margin-bottom: 10px;
+}
+
+.back_nav nav ul li a{
+	background-color: #ccc;
+	color: darkgreen;
+	text-decoration:none;
+	padding: 8px 12px 12px 12px;
+	display: block;
+}
+
+.back_nav nav ul li a:hover{
+	background-color: rgba(233,159,49,.8);
+	color: rgb(255,247,114);
+}
+
+/****************************************************/
+/*Div con margen superior linea roja*/
+
+.l_roja{
+	border-top-color: red;
+	border-top-width: 2px;
+	border-top-style: solid;
+}
+
+/****************************************************/
+/*Sangria a la izquierda*/
+
+.margen_izq ,h4{
+	padding-left: 30px;
+}
+
+.margen_izq li{
+	margin-left:60px;
+}
+
+/****************************************************/
+/*Imagen y tabla*/
+
+.imagen_centrada{
+	text-align: center;
+}
+
+#conciertos{
+	margin-left: 80px;
+	background-color:rgba(61,194,218,.7);
+	border-spacing: 0px;
+	padding:7px;
+}
+
+#filacabecera{
+	padding:20px;
+}
+
+.t_fecha{
+	font-weight: bold;
+}
+
+.filapar{
+	background-color: rgba(255,227,146);
+}
+
+.filaimpar{
+	background-color: rgba(250,255,192);
+}
+
+.filapar:hover , .filaimpar:hover{
+	background-color: rgb(237,126,0);
+}
+
+.filaimpar:hover .t_fecha{
+	background-color: rgb(237,126,0);
+	color:yellow;
+}
+
+.filapar:hover .t_fecha{
+	background-color: rgb(237,126,0);
+	color:yellow;
+}
+
+
+/****************************************************/
+/*Aside*/
+
+aside{
+	background-color: rgba(238,238,27,.7);
+	text-align: center;
+}
+
+aside h3{
+	text-align: left;
+	font-family:sans-serif;
+
+}
+
+aside ul{
+	list-style-type: none;
+}
+
+aside a{
+	color:grey;
+	text-decoration:none;
+	font-style: sans-serif;
+}
+
+aside a b{
+	color:black;
+	font-style: sans-serif;
+}
+
+aside a:visited{
+	color:grey;
+}
+
+aside img{
+	width: 100px;
+}
+
+/****************************************************/
+/*Footer*/
+
+footer{
+	background-color: #ccc;
+	text-align: center;
+	margin: 0px 20px;
+}
+
+footer a{
+	color:blue;
+	text-decoration: none;
+
+}
+
+footer a:visited{
+	color:blue;
+}
+
+footer a:hover{
+	background-color: rgba(238,238,27,.7);
+}

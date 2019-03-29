@@ -1,0 +1,23 @@
+header{
+	color: white;
+	background-color: black;
+}
+
+body{
+	width: 696px;     /* Menor que ancho de imagen para dejar borde blanco */  	
+}
+
+#imagen{
+	float: right;
+  	
+}
+
+#imagen img{
+	width: 258px;
+  	height: 192px;
+}
+
+#enlaces{
+  	padding: 8px 12px 20px 12px;
+  	text-decoration: none;  /* Quitar subrayado */
+}
